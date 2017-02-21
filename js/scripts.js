@@ -15,47 +15,47 @@ var openhatId = document.getElementById('openhat')
 var hihatId = document.getElementById('hihat')
 var bassId = document.getElementById('bass')
 
-snareId.addEventListener('click', snareClickFunction)
-snareId.addEventListener('mouseenter', snareHoverFunction)
+snareId.addEventListener('click', RestartAndPlaySnareSoundFunction)
+snareId.addEventListener('mouseenter', PlaySnareSoundCompletelyNoRestartsFunction)
 
-openhatId.addEventListener('click', openhatClickFunction)
-openhatId.addEventListener('mouseenter', openhatHoverFunction)
+openhatId.addEventListener('click', RestartAndPlayOpenhatSoundFunction)
+openhatId.addEventListener('mouseenter', PlayOpenhatSoundCompletelyNoRestartFunction)
 
-hihatId.addEventListener('click', hihatClickFunction)
-hihatId.addEventListener('mouseenter', hihatHoverFunction)
+hihatId.addEventListener('click', RestartAndPlayHihatSoundFunction)
+hihatId.addEventListener('mouseenter', PlayHihatSoundCompletelyNoRestartFunction)
 
-bassId.addEventListener('click', bassClickFunction)
-bassId.addEventListener('mouseenter', bassHoverFunction)
+bassId.addEventListener('click', RestartAndPlayBassSoundFunction)
+bassId.addEventListener('mouseenter', PlayBassSoundCompletelyNoRestartFunction)
 
-function snareClickFunction () {
+function RestartAndPlaySnareSoundFunction () {
   snareSound.pause()
   snareSound.currentTime = 0
   snareSound.play()
 }
-function snareHoverFunction () {
+function PlaySnareSoundCompletelyNoRestartsFunction () {
   snareSound.play()
 }
-function openhatClickFunction () {
+function RestartAndPlayOpenhatSoundFunction () {
   openhatSound.pause()
   openhatSound.currentTime = 0
   openhatSound.play()
 }
-function openhatHoverFunction () {
+function PlayOpenhatSoundCompletelyNoRestartFunction () {
   openhatSound.play()
 }
-function hihatClickFunction () {
+function RestartAndPlayHihatSoundFunction () {
   hihatSound.pause()
   hihatSound.currentTime = 0
   hihatSound.play()
 }
-function hihatHoverFunction () {
+function PlayHihatSoundCompletelyNoRestartFunction () {
   hihatSound.play()
 }
-function bassClickFunction () {
+function RestartAndPlayBassSoundFunction () {
   bassdrumSound.pause()
   bassdrumSound.currentTime = 0
   bassdrumSound.play()
 }
-function bassHoverFunction () {
+function PlayBassSoundCompletelyNoRestartFunction () {
   bassdrumSound.play()
 }
