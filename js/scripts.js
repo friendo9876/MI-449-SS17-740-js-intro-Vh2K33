@@ -10,47 +10,52 @@ bassdrumSound.setAttribute('src', 'audio/kick.wav')
 var hihatSound = document.createElement('audio')
 hihatSound.setAttribute('src', 'audio/hihat.wav')
 
-document.getElementById('snare').addEventListener('click', snarefunction1)
-document.getElementById('snare').addEventListener('mouseover', snarefunction2)
+var snareId = document.getElementById('snare')
+var openhatId = document.getElementById('openhat')
+var hihatId = document.getElementById('hihat')
+var bassId = document.getElementById('bass')
 
-document.getElementById('openhat').addEventListener('click', openhatfunction1)
-document.getElementById('openhat').addEventListener('mouseover', openhatfunction2)
+snareId.addEventListener('click', snareClickFunction)
+snareId.addEventListener('mouseenter', snareHoverFunction)
 
-document.getElementById('hihat').addEventListener('click', hihatfunction1)
-document.getElementById('hihat').addEventListener('mouseover', hihatfunction2)
+openhatId.addEventListener('click', openhatClickFunction)
+openhatId.addEventListener('mouseenter', openhatHoverFunction)
 
-document.getElementById('bass').addEventListener('click', bassfunction1)
-document.getElementById('bass').addEventListener('mouseover', bassfunction2)
+hihatId.addEventListener('click', hihatClickFunction)
+hihatId.addEventListener('mouseenter', hihatHoverFunction)
 
-function snarefunction1 () {
+bassId.addEventListener('click', bassClickFunction)
+bassId.addEventListener('mouseenter', bassHoverFunction)
+
+function snareClickFunction () {
   snareSound.pause()
   snareSound.currentTime = 0
   snareSound.play()
 }
-function snarefunction2 () {
+function snareHoverFunction () {
   snareSound.play()
 }
-function openhatfunction1 () {
+function openhatClickFunction () {
   openhatSound.pause()
   openhatSound.currentTime = 0
   openhatSound.play()
 }
-function openhatfunction2 () {
+function openhatHoverFunction () {
   openhatSound.play()
 }
-function hihatfunction1 () {
+function hihatClickFunction () {
   hihatSound.pause()
   hihatSound.currentTime = 0
   hihatSound.play()
 }
-function hihatfunction2 () {
+function hihatHoverFunction () {
   hihatSound.play()
 }
-function bassfunction1 () {
+function bassClickFunction () {
   bassdrumSound.pause()
   bassdrumSound.currentTime = 0
   bassdrumSound.play()
 }
-function bassfunction2 () {
+function bassHoverFunction () {
   bassdrumSound.play()
 }
